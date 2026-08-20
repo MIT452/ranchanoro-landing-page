@@ -89,7 +89,7 @@ export default function Home() {
             <a href="#testimonials" className="hover:text-primary transition-colors">Avis</a>
             <a href="#contact" className="hover:text-primary transition-colors">Contact</a>
           </div>
-          <Button className="bg-primary hover:bg-primary/90">Reserver</Button>
+          <Button asChild className="bg-primary hover:bg-primary/90"><a href="#contact">Reserver</a></Button>
         </div>
       </nav>
 
@@ -105,9 +105,16 @@ export default function Home() {
                 Ranchanoro vous propose des experiences uniques alliant equitation, nature et hospitalite malgache. Decouvrez la beaute cotiere d\'Antalaha a cheval.
               </p>
               <div className="flex gap-4 pt-4">
-                <Button size="lg" className="bg-primary hover:bg-primary/90">Decouvrir</Button>
-                <Button size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                  En Savoir Plus
+                <Button asChild size="lg" className="bg-primary hover:bg-primary/90">
+                  <a href="#services">Decouvrir</a>
+                </Button>
+                <Button
+                  asChild
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary/10"
+                >
+                  <a href="#about">En Savoir Plus</a>
                 </Button>
               </div>
             </div>
@@ -195,8 +202,13 @@ export default function Home() {
           <p className="text-white/90 max-w-2xl mx-auto text-lg">
             Reservez des maintenant et vivez une experience equestre unique sur les cotes magnifiques d\'Antalaha.
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-primary hover:bg-white/90">
-            Reserver Maintenant
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+            className="bg-white text-primary hover:bg-white/90"
+          >
+            <a href="#contact">Reserver Maintenant</a>
           </Button>
         </div>
       </section>
@@ -255,7 +267,12 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Telephone</h3>
-                    <p className="text-foreground/70">+261 XX XXX XXXX</p>
+                    <a
+                      href="tel:+261342567634"
+                      className="text-foreground/70 hover:text-primary transition-colors"
+                    >
+                      +261 34 25 676 34
+                    </a>
                   </div>
                 </div>
 
@@ -265,7 +282,12 @@ export default function Home() {
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Email</h3>
-                    <p className="text-foreground/70">contact@ranchanoro.mg</p>
+                    <a
+                      href="mailto:contact@ranchanoro.mg"
+                      className="text-foreground/70 hover:text-primary transition-colors"
+                    >
+                      contact@ranchanoro.mg
+                    </a>
                   </div>
                 </div>
               </div>
